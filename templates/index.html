@@ -1,9 +1,94 @@
-<!DOCTYPE html>
-<html>
-<head>
-    <link rel="stylesheet" href="css/style.css">
-</head>
-<body>
-
-</body>
+<!DOCTYPE HTML>
+<html lang="en">
+    <meta charset="utf-8">
+    <head>
+        <title>
+            Dating Website
+        </title>
+        <link rel="stylesheet" href="dating.css">
+    </head>
+    <h1>Simple Dating Website</h1>
+    <body>
+        <form>
+        <fieldset>
+            <legend>Your Face</legend>
+            <br>
+             <label for="avatar">Your Image:</label> 
+            <input type="file" accept="image/*">
+            <br>
+            <label for="image">Image Preview:</label>
+            <img id="image" />
+        </fieldset>
+        </form>
+        <br>
+        
+        <form>
+        <fieldset>
+            <legend>Your General Details</legend>
+            <br>
+            <label for="name">Name:</label>
+            <input type="text" accept="text/plain">
+            <br>
+            <label for="gender">Gender:</label>
+            <input type="radio" required>Male<input type="radio" required>Female
+            <br>
+            <label for="age">Age:</label>
+            <input type="number" required name="age" value="">
+            <br>
+            <label for="dob">Date of Birth:</label>
+            <input type="date" name="bday">
+            <br>
+            <label for="color">Favorite Color:</label>
+            <input type="color" name="Color">
+            <br>
+            <label for="country">Which Country:</label>
+            <label for="country_name"></label>
+            <input id="country_name" name="country_name" type="text" list="country" />
+            <datalist id="country">
+                <option value="Afghanistan">
+                <option value="Albania">
+                <option value="Algeria">
+                <option value="Andorra">
+                <option value="Angola">
+                <option value="USA">
+                <option value="India">
+            </datalist>
+            
+        </fieldset>
+        </form>
+        
+        <br>
+        
+        <form>
+        <fieldset>
+            <legend>Your Indicators</legend>
+            <br>
+            <label for="height">State Of Exsitence:</label>
+            Alive<input id="slider1" type="range" min="0" max="100" step="10" />Deceased
+        </fieldset>
+        </form>
+        
+        <br>
+        
+        <form>
+        <fieldset>
+            <legend>Your Contact Information</legend>
+            <br>
+            <label for="email">Email:</label>
+            <input type="email" name="email" required placeholder="Enter a valid email address">
+            <br>
+            <label for="mobile">Mobile:</label>
+            <input type="tel">
+            <br>
+            <label for="add">Address:</label>
+            <textarea></textarea>
+            <br>
+            <label for="contact">Method to contact you:</label>
+            <input type="checkbox">Email<input type="checkbox">WhatsApp<input type="checkbox">InAppChat
+        </fieldset>
+        </form>
+    </body>
+    
+    <br>
+    <input type=submit value=Submit>
 </html>
