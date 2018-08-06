@@ -11,7 +11,7 @@ the_jinja_env = jinja2.Environment(
     extensions=['jinja2.ext.autoescape'],
     autoescape=True)
     
-class (webapp2.RequestHandler):
+class HomePage(webapp2.RequestHandler):
     def get(self):
         about_template = the_jinja_env.get_template('templates/about.html')
         self.response.write(about_template.render())
@@ -27,8 +27,9 @@ class AboutPage(webapp2.RequestHandler):
         self.response.write(about_template.render())
         
 app = webapp2.WSGIApplication([
-    ('/', AboutPage),
+    ('/', HomePage),
     ('/contact', ContactPage),
+    ('/about', AboutPage),
 ], debug=True)
 
 
