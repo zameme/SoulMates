@@ -5,6 +5,14 @@ import random
 
 from google.appengine.api import urlfetch
 import json
+from models import Users
+
+def run_query(first_line, second_line, pic_type):
+    user = Users(line1=first_line, line2 = second_line, img_choice = pic_type)
+    user_key = user.put()
+    print("&&&&&&&&&&&&&&&&&&&&&&&&&")
+    print user_key
+
 
 the_jinja_env = jinja2.Environment(
     loader=jinja2.FileSystemLoader(os.path.dirname(__file__)),
@@ -31,14 +39,3 @@ app = webapp2.WSGIApplication([
     ('/contact', ContactPage),
     ('/about', AboutPage),
 ], debug=True)
-
-
-accounts = [
-    {
-        "username": "Roy",
-        "password": "showmeme"
-    },
-    {
-        
-    }
-]
